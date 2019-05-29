@@ -1,0 +1,8 @@
+<script>
+    let safd=document.getElementsByClassName("reservar");
+    for(let i=0;i<safd.length;i++) {
+        safd[i].onclick = function (event) {
+            location.href = "reservas.php?id=" + event.target.id;
+        }
+    }
+</script>
