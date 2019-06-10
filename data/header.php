@@ -54,8 +54,7 @@
     <a href="index.php"><img src="../img/delorean.png" width="100%"></a>
 </div>
 <div id="Inicio" class="col-2 btn btn-light hvr-underline-from-left" style="text-align: center">Inicio</div>
-<div id="Rutas" class="col-2 btn btn-light hvr-underline-from-left" style="text-align: center">Rutas</div>
-<div id="sobre" class="col-2 btn btn-light hvr-underline-from-left" style="text-align: center">Sobre nosotros</div>
+<div id="Rutas" class="col-4 btn btn-light hvr-underline-from-left" style="text-align: center">Rutas</div>
 <div class="col-1" style="text-align: right">
     <input id="login" type="button" class="btn btn-primary" value="Log In">
 </div>
