@@ -84,10 +84,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-around">
-                    <div class="col-5 rutas text-center slideshow p-0 mt-4 mb-2" style=" object-fit: cover; background: url('./img/administrarDatos.jpg') center; background-size: cover">
-                        <p style="background-color: rgba(255,255,255,0.6); padding: 5%;">Administrar Datos</p>
-                    </div>
-                    <div id="mensaje" class="col-5 rutas text-center slideshow p-0 mt-4 mb-2" style=" object-fit: cover; background: url('./img/administrarMensajes.jpg') center; background-size: cover">
+                    <div id="mensaje" class="col-11 rutas text-center slideshow p-0 mt-4 mb-2" style=" object-fit: cover; background: url('./img/administrarMensajes.jpg') center; background-size: cover">
                         <p style="background-color: rgba(255,255,255,0.6); padding: 5%;">Administrar Mensajes</p>
                     </div>
                 </div>
