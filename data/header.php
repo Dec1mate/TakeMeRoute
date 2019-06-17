@@ -171,15 +171,15 @@
                         }
 
                     } else {
-                        if(httpRequest.responseText=="false") {
-                            alert("Usuario o contraseña incorrectos");
+                        if(httpRequest.responseText=="noAceptado") {
+                            alert("Usuario en espera a ser validado");
                             location.href = "index.php";
                         } else {
                             if(httpRequest.responseText=="banned") {
                                 alert("Usuario baneado, si deseas poner una apelación cliquee en el boton ok");
                                 location.href = "createApel.php";
                             } else {
-                                alert("Usuario en espera a ser validado");
+                                 alert("Usuario o contraseña incorrectos");
                                 location.href = "index.php";
                             }
                         }
