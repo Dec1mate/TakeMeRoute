@@ -17,26 +17,27 @@ $conductor=json_decode($conductor);
 $pass=$datos->pass;
 $passar=$conductor[0]->pass;
 $comprobar="false";
-if($conductor[0]->banned==true) {
-    $comprobar="banned";
-    $_SESSION['banned'] = $datos->dni;
-} else {
-    if($conductor[0]->aceptado==false) {
-        $comprobar="noAceptado";
+    if($conductor[0]->banned==true) {
+        $comprobar="banned";
+        $_SESSION['banned'] = $datos->dni;
     } else {
-        if(password_verify($pass,$passar)) {
-            $comprobar="true";
-            if (password_needs_rehash($passar, PASSWORD_DEFAULT)) {
-                $pass = password_hash($pass, PASSWORD_DEFAULT);
-                $consulta = "UPDATE Arbitros SET Pass = ? WHERE Codigo=? ";
-                $result = $PDO->prepare($consulta);
-                $result->execute([$datos->dni, $pass]);
-
+        if(isset($conductor[0]) && $conductor[0]->aceptado==false) {
+            $comprobar="noAceptado";
+        } else {
+            if(password_verify($pass,$passar)) {
+                $comprobar="true";
+                if (password_needs_rehash($passar, PASSWORD_DEFAULT)) {
+                    $pass = password_hash($pass, PASSWORD_DEFAULT);
+                    $consulta = "UPDATE Arbitros SET Pass = ? WHERE Codigo=? ";
+                    $result = $PDO->prepare($consulta);
+                    $result->execute([$datos->dni, $pass]);
+    
+                }
+                $_SESSION['username'] = $datos->dni;
             }
-            $_SESSION['username'] = $datos->dni;
         }
     }
-}
-
+    
 echo $comprobar;
 ?>
+
